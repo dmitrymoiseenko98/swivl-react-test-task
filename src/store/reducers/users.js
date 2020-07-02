@@ -1,7 +1,8 @@
 import {
   FETCH_USERS_REQUEST,
   FETCH_USERS_SUCCESS,
-  FETCH_USERS_ERROR
+  FETCH_USERS_ERROR,
+  CLEAR_USERS
 } from '../types';
 
 const initialState = {
@@ -30,6 +31,8 @@ const reducer = (state = initialState, action) => {
         loading: false,
         error: true,
       };
+    case CLEAR_USERS:
+      return initialState;
     default:
       return state;
   }

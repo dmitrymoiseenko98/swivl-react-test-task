@@ -1,12 +1,16 @@
 
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchUser } from '../../store/actions';
+import { fetchUser, clearUser } from '../../store/actions';
 import Loader from '../Loader';
 import './User.css';
 
 function User(props) {
-  useEffect(() => props.fetchUser(props.match.params.login), []);
+  useEffect(() => {
+    props.fetchUser(props.match.params.login);
+
+    return props.clearUser;
+  }, []);
 
   return (
     <div className="User">
@@ -32,7 +36,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchUser: (username) => dispatch(fetchUser(username))
+  fetchUser: (username) => dispatch(fetchUser(username)),
+  clearUser: () => dispatch(clearUser())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(User);

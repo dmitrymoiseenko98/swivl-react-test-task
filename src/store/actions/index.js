@@ -1,7 +1,9 @@
-import { fetchUsers } from './users';
-import { fetchUser } from './user';
+import { fetchUsers, clearUsers } from './users';
+import { fetchUser, clearUser } from './user';
 
 export {
   fetchUsers,
-  fetchUser
+  clearUsers,
+  fetchUser,
+  clearUser
 }

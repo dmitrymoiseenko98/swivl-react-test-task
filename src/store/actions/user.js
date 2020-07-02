@@ -1,7 +1,8 @@
 import {
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
-  FETCH_USER_ERROR
+  FETCH_USER_ERROR,
+  CLEAR_USER
 } from '../types';
 
 const fetchUserRequest = () => {
@@ -38,3 +39,9 @@ export const fetchUser = (username) => dispatch => {
     dispatch(fetchUserError());
   }
 }
+
+export const clearUser = () => {
+  return {
+    type: CLEAR_USER
+  };
+};

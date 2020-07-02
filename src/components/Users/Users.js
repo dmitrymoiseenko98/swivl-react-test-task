@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../../store/actions';
+import { fetchUsers, clearUsers } from '../../store/actions';
 import { withRouter } from 'react-router-dom';
 import Loader from '../Loader';
 import './Users.css';
@@ -9,6 +9,10 @@ import './Users.css';
 class Users extends Component {
   componentDidMount() {
     this.props.fetchUsers();
+  }
+
+  componentWillUnmount() {
+    this.props.clearUsers();
   }
 
   onUserClick(event, userLogin) {
@@ -63,7 +67,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchUsers: () => dispatch(fetchUsers())
+  fetchUsers: () => dispatch(fetchUsers()),
+  clearUsers: () => dispatch(clearUsers())
 });
 
 export default compose(
