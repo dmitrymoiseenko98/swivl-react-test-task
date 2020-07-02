@@ -39,11 +39,11 @@
   text-align: right;
 }
 
-.Users-item__link {
+.Users-item__github-link {
   text-decoration: none;
 }
 
-.Users-item__link:hover {
+.Users-item__github-link:hover {
   text-decoration: underline;
 }
 
