@@ -1,10 +1,12 @@
 import React from 'react';
-import Loader from '../Loader';
 import './App.css';
+import Users from '../Users';
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="App">
+      <Users />
+    </div>
   );
 }
 
