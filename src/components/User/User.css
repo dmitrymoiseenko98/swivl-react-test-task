@@ -13,3 +13,13 @@
   display: flex;
   justify-content: center;
 }
+
+.User-info {
+  list-style-type: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.User-info-item:not(:first-child) {
+  padding-top: 10px;
+}
