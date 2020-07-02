@@ -1,0 +1,15 @@
+.User {
+  width: 1000px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.User-loading {
+  display: flex;
+  justify-content: center;
+}
+
+.User-content {
+  display: flex;
+  justify-content: center;
+}
